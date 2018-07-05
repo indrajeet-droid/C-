@@ -1,0 +1,38 @@
+escape sequences character
+
+\a	Bell (alert)
+\b	Backspace
+\f	Formfeed
+\n	New line
+\r	Carriage return
+\t	Horizontal tab
+\v	Vertical tab
+\'	Single quotation mark
+\"	Double quotation mark
+\\	Backslash
+\?	Literal question mark
+
+
+
+
+Verbatim Literal
+
+    class Program
+    {
+        static void Main()
+        {
+            // valid folder path
+            string Path = "D:\\Software";
+            Console.WriteLine(Path);
+
+        // Verbatim Literal
+            string Path1 = @"D:\Software";
+            Console.WriteLine(Path1);
+        }
+    }
+
+Verbatim Literal is a string with an @ symbol prefix, as in @“Hello”. Verbatim literals make escape sequences translate as normal printable characters to enhance readability. 
+
+Practical Example: 
+Without Verbatim Literal : "C:\\Pragim\\DotNet\\Training\\Csharp"; // Less Readable
+With Verbatim Literal : @"C:\Pragim\DotNet\Training\Csharp"; // Better Readable
