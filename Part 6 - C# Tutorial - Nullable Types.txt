@@ -1,0 +1,80 @@
+
+why nullable introduced ?
+
+there is one filed which is optional for example
+
+
+bool AreYouMajor = true;
+
+eigther it is true or false or null
+
+
+suppose user don't want to give answer 
+
+in this case we use null
+
+using System;
+class Program
+{
+
+    public static void Main()
+     {
+
+      string s = null;
+
+      //non-nullable value type
+      //int i = null;  compiler give an error
+
+      //to make nullable use question mark
+      int? j = null;
+
+      Console.WriteLine(j);
+
+      bool? AreYouMajor = true;
+
+        if(AreYouMajor == true)
+        {
+            Console.WriteLine("User is Major");
+        }
+
+        else if(AreYouMajor == false)
+        {
+
+            Console.WriteLine("User is not Major");
+        }
+
+        else if(AreYouMajor == null)
+        {
+            Console.WriteLine("User has not selected any value");
+
+        }
+
+         int? TicketOnSale = null;
+
+         int AvailableTickets;
+
+         if (TicketOnSale == null)
+        {
+             AvailableTickets = 0;
+        }
+        else
+        {
+            AvailableTickets = (int)TicketOnSale;
+        }
+
+        Console.WriteLine(AvailableTickets);
+
+        //same way use coalesce operator ?? to achive above in one line
+
+        int AvailableTicket;
+        int? TicketsOnSale = null;
+
+        //Using null coalesce operator ??
+        AvailableTicket = TicketsOnSale ?? 0;
+
+    }   
+
+}
+
+
+
