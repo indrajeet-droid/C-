@@ -1,0 +1,16 @@
+Console.WriteLine("Enter a number");
+      int Number = int.Parse(Console.ReadLine());
+
+      switch(Number)
+      {
+          case 10:
+          Console.WriteLine("user entered Ten");
+          break;
+
+          case 20:
+          Console.WriteLine("User entered twenty");
+          break;
+
+          default:
+          Console.WriteLine("default block");
+          break;
