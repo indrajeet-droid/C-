@@ -1,0 +1,14 @@
+1. Array is a collection of similar data type
+2. Advantage: strongly type it will store only same type of data
+3. Disadvantages:- fixed in size once it initialized. Have to rely on index for      retrival and store
+
+ int[] EvenNumbers = new int[3];
+        EvenNumbers[0] = 0;
+        EvenNumbers[1] = 2;
+        EvenNumbers[2] = 4;
+
+  // Retrieve and print even numbers from the array
+        for (int i = 0; i < EvenNumbers.Length; i++)
+        {
+            Console.WriteLine(EvenNumbers[i]);
+        }
