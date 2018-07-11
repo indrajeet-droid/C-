@@ -1,0 +1,9 @@
+Console.WriteLine("Please enter a number");
+      int input = int.Parse(Console.ReadLine());
+      int temp = 0;
+
+      while(temp <= input)
+      {
+          Console.Write("{0} ",temp);
+          temp += 2;
+      } 
