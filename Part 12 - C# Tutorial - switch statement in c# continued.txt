@@ -1,0 +1,42 @@
+int TotalBillAmount = 0;
+        Start:
+        Console.WriteLine("Please select Coffee...\n 1.Small \n 2.Medium \n 3.Large");
+        int UserChoice = int.Parse(Console.ReadLine());
+        
+        switch(UserChoice)
+        {
+            case 1:
+                TotalBillAmount += 1;
+            break;
+            
+            case 2:
+             TotalBillAmount += 2;
+            break;
+            
+            case 3:
+                TotalBillAmount += 3;
+            break;
+            
+            default:
+            Console.WriteLine("invalid choice");
+            goto Start;
+
+        }   
+        Point2:
+        Console.WriteLine("want to buy more? \n 1.Yes \n 2.No");
+        String strChoice = Console.ReadLine();
+
+        switch(strChoice.ToUpper())
+        {
+            case "YES":
+            goto Start;
+
+            case "NO":
+            break;
+            
+            default:
+            goto Point2;
+        } 
+        
+        Console.WriteLine("thanks for shopping with us");
+        Console.WriteLine("Your Bill Amt {0}", TotalBillAmount);
